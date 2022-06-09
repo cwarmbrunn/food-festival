@@ -5,13 +5,11 @@ Food Festival
 ---
 
 **Project Description/Summary:**
-
+Measuring and optimizing the performance of a food festival web application using PWA (progressive web application) best practices.
 
 ---
 
 **Live Site:**
-
-This is not a deployed live site - please test routes via Insomnia.
 
 ---
 
@@ -20,10 +18,11 @@ This is not a deployed live site - please test routes via Insomnia.
 - JavaScript
 - Mongoose
 - Express.js
+- HTML
+- CSS
 
 ---
 
 **Installation:**
 
-Use _npm i_ to install the necessary packages. Then, use npm start and test routes via Insomnia or http://localhost:3001
-
+Use _npm i_ to install npm packages.
