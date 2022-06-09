@@ -23,18 +23,18 @@ self.addEventListener("fetch", function (e) {
       if (request) {
         // if cache is available, respond with cache
         console.log("responding with cache : " + e.request.url);
-        return request;
+        return request
       } else {
         // if there are no cache, try fetching request
         console.log("file is not cached, fetching : " + e.request.url);
-        return fetch(e.request);
+        return fetch(e.request)
       }
 
       // You can omit if/else for console.log & put one line below like this too.
       // return request || fetch(e.request)
     })
-  );
-});
+  )
+})
 
 // Cache resources
 self.addEventListener("install", function (e) {
@@ -49,10 +49,10 @@ self.addEventListener("install", function (e) {
 // Delete outdated caches
 self.addEventListener("activate", function (e) {
   e.waitUntil(
-    caches.keys().then(function (keyList) {
+    caches.keys().then(function(keyList) {
       // `keyList` contains all cache names under your username.github.io
       // filter out ones that has this app prefix to create keeplist
-      let cacheKeeplist = keyList.filter(function (key) {
+      let cacheKeeplist = keyList.filter(function(key) {
         return key.indexOf(APP_PREFIX);
       });
       // add current cache name to keeplist
